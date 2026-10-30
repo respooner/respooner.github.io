@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Shen Majun, Applied Data Science, Monash University Malaysia. Reproducible data pipelines and validated machine-learning models.">
+<meta name="author" content="Shen Majun">
+<meta property="og:title" content="Shen Majun Portfolio">
+<meta property="og:description" content="Reproducible data pipelines and validated machine-learning models.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313202a'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' fill='%23f2f4f3' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
+<style>*, *::before, *::after { box-sizing: border-box; } body { margin: 0; } img { max-width: 100%; } [hidden] { display: none !important; }</style>
+<title>Shen Majun · FootfallCam application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+<meta name="robots" content="noindex,follow">
+</head>
+<body>
+<nav class="nav" aria-label="Sections">
+  <div class="nav-inner">
+    <a class="mark" href="#top"><i>SM</i><span>Shen Majun</span></a>
+    <div class="nav-links"><a href="/">Portfolio home</a>
+      <a href="#work">Work</a><a href="#pipeline">Pipeline</a><a href="#models">Models</a><a href="#qc">Quality</a><a href="#toolkit">Toolkit</a><a href="/mini-arcade/">Arcade</a><a href="#contact">Contact</a>
+    </div>
+    <button class="icon-btn" id="theme" type="button" aria-label="Switch light or dark theme" title="Switch light or dark theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Shen Majun · Applied Data Science · Monash University Malaysia</p>
+      <h1>Counting is easy. <em>Trusting the count</em> is the work.</h1>
+      <p class="hero-text">I build data pipelines and validate machine-learning models so that the numbers people act on hold up: every file logged, every gap explained, every result reproducible.</p>
+      <p class="target"><i></i>Applying for the FootfallCam internship for Computer / IT students</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See the projects</a>
+        <button class="btn" type="button" data-copy-email>Copy email</button>
+      </div>
+    </div>
+    <figure class="door card">
+      <div class="door-head"><span class="live"><i></i>Doorway counter</span><span class="door-tag">Simulation</span></div>
+      <canvas id="door" role="img" aria-label="Animated top-down view of people walking in and out through a doorway while a counter tallies each crossing"></canvas>
+      <div class="door-stats" aria-live="off">
+        <div><span>In</span><b id="c-in">1,284</b></div>
+        <div><span>Out</span><b id="c-out">1,197</b></div>
+        <div><span>Inside now</span><b id="c-now">87</b></div>
+      </div>
+      <figcaption>Each dot crosses a virtual counting line. Orange pairs walk shoulder to shoulder, the case a good counter must not merge into one person.</figcaption>
+    </figure>
+  </header>
+
+  <section class="sec" id="work">
+    <div class="sec-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Two projects, one habit: check the numbers before anyone uses them</h2>
+    </div>
+    <div class="work-grid">
+      <a class="work-card card" href="#pipeline">
+        <span class="kind">Data engineering · my research project</span>
+        <strong>Malaysia dengue data pipeline</strong>
+        <span class="desc">Five open datasets merged into one weekly analysis table, with seven automatic quality checks and a byte-identical rebuild on a second computer.</span>
+        <span class="stats"><span><b>626</b>weeks</span><span><b>34</b>raw files</span><span><b>7</b>checks</span></span>
+        <span class="go">View the pipeline</span>
+      </a>
+      <a class="work-card card" href="#models">
+        <span class="kind">Machine learning · medRxiv preprint, co-author</span>
+        <strong>Cardiometabolic risk models on NHANES</strong>
+        <span class="desc">Three algorithms under strict leakage controls, frozen and then tested once on a later survey cycle they had never seen.</span>
+        <span class="stats"><span><b>2,114</b>participants</span><span><b>3</b>algorithms</span><span><b>2,000</b>bootstraps</span></span>
+        <span class="go">View the models</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec" id="pipeline">
+    <div class="sec-head">
+      <p class="eyebrow">Project 1 · Data engineering</p>
+      <h2>Malaysia dengue data pipeline, 2011–2022</h2>
+      <p class="lede">Phase 1 of my research project on a climate-driven model of dengue in Malaysia. I collected five open datasets, merged them into one weekly table and wrote automatic quality checks so anyone can rebuild the result on another computer and get the same file.</p>
+    </div>
+    <div class="tally card">
+      <div><b>626</b><span>weeks in the analysis table</span></div>
+      <div><b>34</b><span>raw files, each SHA-256 logged</span></div>
+      <div><b>5</b><span>open data sources merged</span></div>
+      <div><b>7</b><span>automatic QC checks</span></div>
+      <div><b>38 s</b><span>full rebuild on a second PC</span></div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-head">
+        <div><h3>Weekly dengue cases, Malaysia</h3><p class="caption">OpenDengue V1.3 (WHO Western Pacific updates), output of my pipeline</p></div>
+        <div class="chips" role="group" aria-label="Chart layers">
+          <button class="chip" type="button" aria-pressed="true" data-layer="mco"><i class="sw band"></i>MCO period</button>
+          <button class="chip" type="button" aria-pressed="true" data-layer="flags"><i class="sw flag"></i>QC flags</button>
+          <button class="chip" type="button" aria-pressed="true" data-layer="gaps"><i class="sw gap"></i>Missing weeks</button>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-scroll"><svg id="chart" viewBox="0 0 900 320" role="img" aria-label="Weekly dengue cases in Malaysia from 2011 to 2022, peaking at 3,642 in January 2016 and above 3,500 in 2019, then dropping sharply during the Movement Control Order"></svg></div>
+        <div class="tip" id="chart-tip" hidden></div>
+      </div>
+      <p class="caption">Hover, or drag on a touch screen, to read any week. Use the buttons to switch layers on and off.</p>
+    </div>
+
+    <div class="flow" role="tablist" aria-label="Pipeline steps">
+      <button class="step" role="tab" type="button" aria-selected="true" aria-controls="step-panel" data-step="0"><span class="n">Step 1</span><span class="file">download.py</span><span class="verb">Fetch</span></button>
+      <button class="step" role="tab" type="button" aria-selected="false" aria-controls="step-panel" data-step="1"><span class="n">Step 2</span><span class="file">pipeline.py</span><span class="verb">Build</span></button>
+      <button class="step" role="tab" type="button" aria-selected="false" aria-controls="step-panel" data-step="2"><span class="n">Step 3</span><span class="file">qc.py</span><span class="verb">Check</span></button>
+      <button class="step" role="tab" type="button" aria-selected="false" aria-controls="step-panel" data-step="3"><span class="n">Step 4</span><span class="file">compare_with_reference.py</span><span class="verb">Verify</span></button>
+    </div>
+    <div class="step-panel card" id="step-panel" role="tabpanel" aria-live="polite">
+      <h3 id="step-title">Fetch every source and log it</h3>
+      <p id="step-text">Downloads 34 raw files from OpenDengue, NASA POWER, the Ministry of Health, OxCGRT and OpenDOSM. Each download is logged with its URL, UTC time, size and SHA-256, and raw files are never edited afterwards.</p>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Engineering choices</h3>
+        <ul class="ticks">
+          <li>Python standard library only, so it runs anywhere with Python 3.10+.</li>
+          <li>Raw files are never edited; every change happens in code.</li>
+          <li>A pandas version of the same cleaning produces a matching output.</li>
+          <li>A decision log records each judgement call, its reason and who agreed.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Research documentation</h3>
+        <p class="caption">Planned in a full document set, in English with matching Chinese editions.</p>
+        <ul class="docs">
+          <li><b>D1</b>Research proposal</li>
+          <li><b>D2</b>Literature review matrix</li>
+          <li><b>D3</b>Data plan</li>
+          <li><b>D4</b>Methodology design</li>
+          <li><b>D5</b>Experimental protocol</li>
+          <li><b>D6</b>Project management plan</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="models">
+    <div class="sec-head">
+      <p class="eyebrow">Project 2 · Machine learning · co-author</p>
+      <h2>Cardiometabolic risk models on NHANES, 2011–2018</h2>
+      <p class="lede">Two studies on US national health survey data, with Xiaonan Zhan, Yichi Zhang and Xingwei Mao. We asked which body measurements really improve a model that flags people at high cardiometabolic risk, and tested each answer on a later survey cycle the models had never been trained on.</p>
+    </div>
+    <div class="cite card">
+      <p class="eyebrow">Preprint · medRxiv · posted 12 October 2026 · not yet peer reviewed</p>
+      <a href="https://www.medrxiv.org/content/10.64898/2026.10.09.26365176v1" target="_blank" rel="noopener">Does handgrip strength improve cardiometabolic risk stratification beyond detailed body composition? NHANES 2011–2014 with temporal validation</a>
+      <p class="authors">Zhan X, <strong>Shen M</strong>, Zhang Y, Mao X. DOI <span class="doi">10.64898/2026.10.09.26365176</span></p>
+      <p class="authors">Companion study on NHANES 2015–2018 (visceral fat versus body fat percentage): manuscript in preparation.</p>
+    </div>
+    <p class="role"><strong>My role:</strong> research planning and coordination, cardiovascular data processing, exploratory analysis, visualization, and synthesis of the findings.</p>
+    <div class="tally card">
+      <div><b>2,114</b><span>participants across four survey cycles</span></div>
+      <div><b>3</b><span>algorithms: logistic, elastic-net, XGBoost</span></div>
+      <div><b>5 × 4</b><span>nested cross-validation folds</span></div>
+      <div><b>2,000</b><span>paired bootstrap resamples per comparison</span></div>
+      <div><b>10⁻¹⁵</b><span>agreement when metrics were recomputed independently</span></div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-head">
+        <div><h3>Which measurements add real information?</h3><p class="caption" id="forest-note">Validation cohort: frozen models scored once on the later survey cycle.</p></div>
+        <div class="seg" role="group" aria-label="Cohort">
+          <button type="button" aria-pressed="true" data-cohort="val">Validation</button>
+          <button type="button" aria-pressed="false" data-cohort="dev">Development</button>
+        </div>
+      </div>
+      <div class="chips" aria-hidden="true">
+        <span class="chip"><i class="sw line"></i>Gain is real (95% CI above zero)</span>
+        <span class="chip"><i class="sw mute"></i>No reliable gain (CI includes zero)</span>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-scroll"><svg id="forest" viewBox="0 0 900 300" role="img" aria-label="Change in AUC for six comparisons. Visceral fat adds about 0.04 and visceral fat plus body fat about 0.06 in validation; grip strength, muscle mass and body fat alone add nothing reliable"></svg></div>
+        <div class="tip" id="forest-tip" hidden></div>
+      </div>
+      <p class="caption">Change in AUC when each measurement is added, logistic regression, with 95% bootstrap intervals. Switch cohorts to see that the result holds in both.</p>
+    </div>
+    <div class="cols">
+      <div class="card">
+        <h3>How the models were kept honest</h3>
+        <ul class="ticks">
+          <li>Predictors entered only through a fixed whitelist, so no outcome information leaked into the inputs.</li>
+          <li>Imputation, scaling and tuning were learned inside training folds only.</li>
+          <li>The analysis plan and every fitted pipeline were locked with SHA-256 checksums before validation.</li>
+          <li>Validation data were scored once, with no refitting or recalibration.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What we found</h3>
+        <ul class="ticks">
+          <li>Visceral fat from DXA scans added a reproducible gain over BMI and waist size.</li>
+          <li>Grip strength added nothing: all 12 of its comparisons had intervals that included zero.</li>
+          <li>SHAP attributions showed that a feature can get model attention without improving accuracy.</li>
+          <li>Reporting followed the TRIPOD+AI checklist for prediction models.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="qc">
+    <div class="sec-head">
+      <p class="eyebrow">Quality control</p>
+      <h2>Seven checks run on every build of the dengue table</h2>
+      <p class="lede">A count is only useful if you know when it is wrong. Results of the reference run on 20 October 2026; open a row to see what the check found.</p>
+    </div>
+    <div class="qc card">
+      <details><summary><span class="n">0</span><span class="name">Raw file integrity</span><span class="pill pass">PASS</span><span class="sum">34 files match their logged SHA-256</span><i class="chev"></i></summary>
+        <div class="more"><p>Every raw file is hashed again and compared with the hash written to <code>DOWNLOAD_LOG.csv</code> at download time, so a silently changed file cannot slip in.</p></div></details>
+      <details><summary><span class="n">1</span><span class="name">Calendar completeness</span><span class="pill pass">PASS</span><span class="sum">626 consecutive weeks, 2011-01-02 to 2022-12-25</span><i class="chev"></i></summary>
+        <div class="more"><p>Every Sunday-start week appears exactly once, with no duplicates and no jumps in the calendar.</p></div></details>
+      <details><summary><span class="n">2</span><span class="name">Case counts</span><span class="pill pass">PASS</span><span class="sum">2 missing weeks flagged, not filled silently</span><i class="chev"></i></summary>
+        <div class="more"><p>Missing in the source and kept as missing, with a flag column:</p><ul><li>2014-12-28</li><li>2020-12-27</li></ul></div></details>
+      <details><summary><span class="n">3</span><span class="name">Outliers</span><span class="pill warn">WARN</span><span class="sum">5 weeks changed by more than 50% in one week</span><i class="chev"></i></summary>
+        <div class="more"><p>Raised as warnings for review against the WHO source. The 2013-12-29 drop is the first week taken from a different WHO source document.</p><ul><li>2011-09-04: 178 → 310 (+74%)</li><li>2013-12-29: 2,087 → 1,019 (−51%)</li><li>2014-01-05: 1,019 → 1,930 (+89%)</li><li>2014-08-03: 1,818 → 2,975 (+64%)</li><li>2017-11-19: 1,003 → 1,536 (+53%)</li></ul></div></details>
+      <details><summary><span class="n">4</span><span class="name">Climate ranges</span><span class="pill pass">PASS</span><span class="sum">75,968 location-days within plausible limits</span><i class="chev"></i></summary>
+        <div class="more"><p>Daily temperature, rainfall and humidity at 16 state capitals checked against physical limits before weekly aggregation.</p></div></details>
+      <details><summary><span class="n">5</span><span class="name">Lag alignment</span><span class="pill pass">PASS</span><span class="sum">Random weeks recomputed by an independent code path</span><i class="chev"></i></summary>
+        <div class="more"><p>Five random weeks, one random lag each, three variables. Examples:</p><ul><li>2015-02-22 temperature lag 1: stored 25.6847, recomputed 25.6847</li><li>2019-08-18 rainfall lag 4: stored 38.2796, recomputed 38.2796</li><li>2020-06-07 humidity lag 7: stored 81.1897, recomputed 81.1897</li></ul></div></details>
+      <details><summary><span class="n">6</span><span class="name">Reproducibility</span><span class="pill pass">PASS</span><span class="sum">A re-run produces the identical file hash</span><i class="chev"></i></summary>
+        <div class="more"><p>SHA-256 of <code>analysis_weekly.csv</code>:</p><ul><li style="overflow-wrap:anywhere">63e874e087cb369cb9863af6ad390d835383f2904d66a9bf6e2590da670570d3</li></ul></div></details>
+    </div>
+  </section>
+
+  <section class="sec" id="fit">
+    <div class="sec-head">
+      <p class="eyebrow">Why FootfallCam</p>
+      <h2>The same problems, at a shop entrance</h2>
+      <p class="lede">FootfallCam counts visitors with 3D sensors and AI video analytics for retailers, malls, libraries and airports. The data problems I worked on are the ones a people-counting platform meets every day.</p>
+    </div>
+    <div class="fit card">
+      <div class="fit-head"><span>In my projects</span><span></span><span>At a people-counting company</span></div>
+      <div class="fit-row"><span>Two missing weeks flagged instead of guessed</span><span class="arrow" aria-hidden="true">→</span><span class="them">A sensor goes offline for a day; reports should show the gap honestly</span></div>
+      <div class="fit-row"><span>Week-to-week change above 50% raised as a warning</span><span class="arrow" aria-hidden="true">→</span><span class="them">Alerts for abnormal counts before a client sees a wrong report</span></div>
+      <div class="fit-row"><span>Step change caused by a switch of source document</span><span class="arrow" aria-hidden="true">→</span><span class="them">Step change after a device swap, firmware update or new counting line</span></div>
+      <div class="fit-row"><span>Lockdown phases and stringency joined to every week</span><span class="arrow" aria-hidden="true">→</span><span class="them">Footfall baselines that account for holidays, events and closures</span></div>
+      <div class="fit-row"><span>Weather lagged 1–8 weeks and checked for alignment</span><span class="arrow" aria-hidden="true">→</span><span class="them">Footfall compared with weather, promotions and opening hours</span></div>
+      <div class="fit-row"><span>Identical hash on every re-run</span><span class="arrow" aria-hidden="true">→</span><span class="them">The same report numbers no matter when or where they are generated</span></div>
+      <div class="fit-row"><span>Models frozen, then tested once on a later survey cycle</span><span class="arrow" aria-hidden="true">→</span><span class="them">Counting and forecasting models tested on new stores and later dates before release</span></div>
+      <div class="fit-row"><span>A feature can get SHAP attention without improving accuracy</span><span class="arrow" aria-hidden="true">→</span><span class="them">Proving that a new sensor signal really improves the numbers clients see</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="toolkit">
+    <div class="sec-head">
+      <p class="eyebrow">Toolkit</p>
+      <h2>What I work with</h2>
+      <p class="legend-note"><i></i>Marked skills appear in the projects above; hover one to see where.</p>
+    </div>
+    <dl class="skill-groups card">
+      <div><dt>Programming and data</dt><dd class="skills">
+        <span class="skill" tabindex="0" data-used="Dengue pipeline · NHANES models">Python</span><span class="skill">C++</span><span class="skill">SQL</span><span class="skill">NumPy</span><span class="skill" tabindex="0" data-used="pandas version of the dengue cleaning">pandas</span><span class="skill" tabindex="0" data-used="Dengue pipeline">CSV and JSON</span><span class="skill" tabindex="0" data-used="NASA POWER, OpenDOSM, MOH sources">Open data APIs</span>
+      </dd></div>
+      <div><dt>Machine learning and AI</dt><dd class="skills">
+        <span class="skill" tabindex="0" data-used="NHANES models">scikit-learn</span><span class="skill" tabindex="0" data-used="NHANES models">XGBoost</span><span class="skill">PyTorch</span><span class="skill" tabindex="0" data-used="NHANES model explanations">SHAP</span><span class="skill">NLP</span><span class="skill">LLMs</span><span class="skill">RAG</span>
+      </dd></div>
+      <div><dt>Data and research methods</dt><dd class="skills">
+        <span class="skill" tabindex="0" data-used="Dengue QC checks">Data cleaning and validation</span><span class="skill" tabindex="0" data-used="Climate lags in the dengue table">Feature engineering</span><span class="skill" tabindex="0" data-used="Daily to weekly climate">Time-series aggregation</span><span class="skill" tabindex="0" data-used="NHANES models">Nested cross-validation</span><span class="skill" tabindex="0" data-used="NHANES models">Bootstrap intervals</span><span class="skill">Statistical analysis</span><span class="skill" tabindex="0" data-used="NHANES figures">Visualization (matplotlib)</span><span class="skill" tabindex="0" data-used="Both projects">Reproducibility (SHA-256)</span>
+      </dd></div>
+      <div><dt>Tools and communication</dt><dd class="skills">
+        <span class="skill">Git and GitHub</span><span class="skill">Jupyter</span><span class="skill">VS Code</span><span class="skill" tabindex="0" data-used="D1–D6 documents">Technical writing</span><span class="skill">English and Chinese</span>
+      </dd></div>
+    </dl>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk about data people can trust.</h2>
+      <p class="email" id="email">shenmajun683@gmail.com</p>
+    </div>
+    <div class="cta">
+      <button class="btn primary" type="button" data-copy-email>Copy email</button>
+      <a class="btn" href="mailto:shenmajun683@gmail.com">Open email app</a>
+    </div>
+  </section>
+  <footer class="foot"><span>© 2026 Shen Majun</span><span><a href="/mini-arcade/">Mini Arcade</a> · <a href="https://github.com/respooner/respooner.github.io">GitHub / source</a></span></footer>
+</main>
+
+<script src="/assets/main.js"></script>
+</body>
+</html>

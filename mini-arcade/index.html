@@ -119,6 +119,7 @@ code { font: 400 .9em var(--mono); background: var(--signal-soft); padding: 1px 
 .how ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px 24px; padding-left: 18px; color: var(--muted); }
 .how li::marker { color: var(--signal); }
 .how b { color: var(--ink); }
+.project-links{display:flex;flex-wrap:wrap;gap:14px}.project-links a,.how a{text-underline-offset:3px;color:var(--signal)}
 </style>
 <script>
 /* Shared helpers for the arcade: theme switch (same "sm-theme" key as the portfolio),
@@ -174,8 +175,8 @@ code { font: 400 .9em var(--mono); background: var(--signal-soft); padding: 1px 
 <body>
 <nav class="nav" aria-label="Site">
   <div class="nav-inner">
-    <a class="mark" href="https://respooner.github.io/"><i>SM</i><span>Shen Majun</span></a>
-    <div class="nav-links"><a href="https://respooner.github.io/">Portfolio</a><a href="index.html" class="active">Arcade</a></div>
+    <a class="mark" href="/"><i>SM</i><span>Shen Majun</span></a>
+    <div class="nav-links"><a href="/">Portfolio</a><a href="index.html" class="active">Arcade</a></div>
     <button class="icon-btn" id="theme" type="button" aria-label="Switch light or dark theme" title="Switch light or dark theme">
       <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
     </button>
@@ -186,7 +187,7 @@ code { font: 400 .9em var(--mono); background: var(--signal-soft); padding: 1px 
   <header class="page-head">
     <p class="eyebrow">Mini Arcade · game programming side projects</p>
     <h1>Three games you can play in the browser</h1>
-    <p class="lede">A card battler, a poker roguelite and a dungeon crawler. Each one is a single HTML file in plain JavaScript, with no engine or build step. Every game has an ⓘ button that explains how it is built.</p>
+    <p class="lede">A card battler, a poker roguelite and a dungeon crawler. Each one is a single HTML file in plain JavaScript, with no engine or build step. Choose a game to play, or open its source and technical notes below. Each game also has an ⓘ button explaining its implementation.</p>
   </header>
 
   <div class="games">
@@ -233,6 +234,16 @@ code { font: 400 .9em var(--mono); background: var(--signal-soft); padding: 1px 
     </a>
   </div>
 
+  <section class="how" id="project-materials">
+    <p class="eyebrow">Project materials</p><h2>Play, inspect, understand</h2>
+    <p>AI-assisted browser game prototypes, with public source, commit history and implementation notes.</p>
+    <div class="project-links"><a href="project-notes.html">Technical notes, previews and contribution scope →</a><a href="https://github.com/respooner/respooner.github.io/tree/main/mini-arcade">Browse all source files →</a></div>
+    <ul>
+      <li><b>Bug Slayer:</b> <a href="bug-slayer.html">Play</a> · <a href="https://github.com/respooner/respooner.github.io/blob/main/mini-arcade/bug-slayer.html">Source</a> · <a href="project-notes.html#bug-slayer">Technical notes</a></li>
+      <li><b>Lucky Flush:</b> <a href="lucky-flush.html">Play</a> · <a href="https://github.com/respooner/respooner.github.io/blob/main/mini-arcade/lucky-flush.html">Source</a> · <a href="project-notes.html#lucky-flush">Technical notes</a></li>
+      <li><b>Neon Crypt:</b> <a href="neon-crypt.html">Play</a> · <a href="https://github.com/respooner/respooner.github.io/blob/main/mini-arcade/neon-crypt.html">Source</a> · <a href="project-notes.html#neon-crypt">Technical notes</a></li>
+    </ul>
+  </section>
   <section class="how">
     <p class="eyebrow">What the code shows</p>
     <h2>Talking points</h2>
@@ -243,7 +254,7 @@ code { font: 400 .9em var(--mono); background: var(--signal-soft); padding: 1px 
       <li><b>Product thinking.</b> Telegraphed enemy intents, live damage previews, keyboard and touch controls, reduced-motion support and saved best scores.</li>
     </ul>
   </section>
-  <footer class="foot"><a href="https://respooner.github.io/">← Back to the portfolio</a><span>Plain HTML, CSS and JavaScript · no build step</span></footer>
+  <footer class="foot"><a href="/">← Back to the portfolio</a><span>Plain HTML, CSS and JavaScript · no build step</span></footer>
 </main>
 
 <script>

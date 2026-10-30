@@ -249,3 +249,12 @@ ul.ticks li::before { content: ""; position: absolute; left: 2px; top: .62em; wi
 .contact .cta .btn:hover { border-color: var(--paper); }
 @media (max-width: 720px) { .contact { grid-template-columns: 1fr; } }
 .foot { padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; font-size: 13px; color: var(--muted); }
+
+/* Portfolio links and project evidence. */
+.evidence { display: grid; gap: 12px; padding: 22px; }
+.work-grid .work-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.foot a { text-underline-offset: 3px; }
+.evidence-list { padding-left: 20px; margin: 0; }
+.evidence-list li + li { margin-top: 10px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.project-links a { color: var(--signal); font-weight: 600; text-underline-offset: 3px; }

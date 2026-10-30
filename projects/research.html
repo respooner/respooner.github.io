@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research project materials · Shen Majun</title><meta name="description" content="Project methods, contribution scope and public evidence for Shen Majun's portfolio.">
+<link rel="stylesheet" href="/assets/style.css"><style>*{box-sizing:border-box}body{margin:0}main{padding-top:32px!important}h1{font-size:clamp(32px,6vw,56px)}.card{padding:24px}.sec{padding-bottom:24px}.nav-inner{flex-wrap:wrap}img{max-width:100%;height:auto;border-radius:8px}.preview{max-height:440px;object-fit:contain;background:#0b0e24;width:100%}</style></head>
+<body><nav class="nav" aria-label="Site"><div class="nav-inner"><a class="mark" href="/">Shen Majun</a><div class="nav-links"><a href="/">Portfolio</a><a href="/mini-arcade/">Arcade</a><a href="https://github.com/respooner/respooner.github.io">GitHub</a></div></div></nav><main class="wrap"><h1>Research project materials</h1>
+<p class="lede">Methods, contribution scope and the materials currently public for the two research projects.</p>
+<section class="sec" id="dengue"><h2>Malaysia dengue data pipeline</h2><div class="card">
+<p><strong>Scope:</strong> data collection, weekly alignment and quality control for the 2011–2022 preparation phase of a research project.</p>
+<ul class="evidence-list"><li><strong>Work described:</strong> merge five open sources; preserve raw files; log download hashes; check missing weeks, outliers, climate ranges and lag alignment.</li>
+<li><strong>Reported output:</strong> 626 weeks, 34 raw files and seven checks. The homepage shows a reference run dated 20 October 2026, including warnings and missingness.</li>
+<li><strong>Reproduction:</strong> the project describes Python 3.10+, download.py → pipeline.py → qc.py → compare_with_reference.py. These scripts and their run artifacts are not distributed in this repository, so these are methodology notes rather than a runnable research release.</li>
+<li><strong>Evidence boundary:</strong> the chart and QC summaries are presentation content. Their presence here does not independently reproduce the source analysis.</li></ul>
+<div class="cta"><a class="btn" href="/#pipeline">Interactive project summary</a><a class="btn" href="/#qc">Reference QC results</a><a class="btn" href="https://github.com/respooner/respooner.github.io/blob/main/assets/main.js">Chart implementation</a></div>
+</div></section>
+<section class="sec" id="nhanes"><h2>NHANES cardiometabolic risk models</h2><div class="card">
+<p><strong>Collaborative research.</strong> The portfolio describes research planning and coordination, cardiovascular data processing, exploratory analysis, visualization and synthesis as Shen Majun's contribution.</p>
+<ul class="evidence-list"><li><strong>Methods presented:</strong> logistic regression, elastic-net and XGBoost; nested cross-validation; temporal validation; paired bootstrap intervals; leakage controls.</li>
+<li><strong>Public manuscript:</strong> the linked medRxiv preprint credits Zhan X, Shen M, Zhang Y and Mao X. It is not yet peer reviewed. A companion study is described as a manuscript in preparation.</li>
+<li><strong>Reproduction:</strong> analysis code, cohort-building scripts and model artifacts are not included in this website repository. Refer to the manuscript for the study's reported design; the website chart is a presentation layer.</li></ul>
+<div class="cta"><a class="btn" href="https://www.medrxiv.org/content/10.64898/2026.10.09.26365176v1">Read the preprint</a><a class="btn" href="/#models">Interactive project summary</a></div>
+</div></section>
+<footer class="foot"><a href="/">← Portfolio</a><a href="https://github.com/respooner/respooner.github.io">Source and history</a></footer></main></body></html>
